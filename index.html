@@ -1,1 +1,126 @@
-<h1>hello world!!!</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQueryの勉強</title>
+
+  <link type="text/css" rel="stylesheet"
+  href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+
+  <link href="./mydesign.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript"
+  src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+  src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+$(function() {
+  var showFlag = false;
+  var topBtn = $('#page-top');
+  topBtn.css('bottom', '-100px');
+  // スクロールが100に達したらボタンを表示
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 150) {
+      if (showFlag == false) {
+        showFlag = true;
+        topBtn.stop().animate({'bottom' : '20px'}, 200);
+      }
+    } else {
+      if (showFlag == true) {
+        showFlag = false;
+        topBtn.stop().animate({'bottom' : '-100px'}, 200);
+      }
+    }
+  });
+  // スクロールしてトップ
+  topBtn.click(function() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+});
+
+</script>
+
+<h1>ここがPage Topです</h1>
+<p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+<p>ほげほげ</p>
+
+
+
+</body>
+</html>
