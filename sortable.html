@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQueryの勉強</title>
+</head>
+
+<body>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  
+  <script>
+    $(function() {
+      $('.item > .panel > p.item-up').click(function() {
+      	var target = $(this).parents('.item');
+      	var prev = target.prev();
+      	prev.before(target);
+      });
+      $('.item > .panel > p.item-down').click(function() {
+      	var target = $(this).parents('.item');
+      	var next = target.next();
+      	next.after(target);
+      });
+    });
+ 
+  </script>
+
+<div id="items">
+  
+  <div class="item">
+  	<div class="panel">
+  	  <p>huga</p>
+  	  <p class="item-up">
+  	    △
+      </p>
+      <p class="item-down">
+        ▽
+      </p>
+ 	  </div>
+  </div>
+  <div class="item">
+  	<div class="panel">
+  	  <p>pugya</p>
+  	  <p class="item-up">
+  	    △
+      </p>
+      <p class="item-down">
+        ▽
+      </p>
+    </div>
+  </div>
+  <div class="item">
+  	<div class="panel">
+  	  <p>fuga</p>
+  	  <p class="item-up">
+  	    △
+      </p>
+      <p class="item-down">
+        ▽
+      </p>
+	  </div>
+  </div>
+  <div class="item">
+  	<div class="panel">
+    	<p>moga</p>
+    	<p class="item-up">
+  	    △
+      </p>
+      <p class="item-down">
+        ▽
+      </p>
+    </div>
+  </div>
+  <div class="item">
+  	<div class="panel">
+  	  
+	  	<p>boge</p>
+	  	<p class="item-up">
+	  	  △
+	    </p>
+	    <p class="item-down">
+	      ▽
+	    </p>
+	  
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
